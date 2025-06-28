@@ -1,0 +1,124 @@
+/* Sora */
+@font-face {
+    font-family: "Sora";
+    src: url('../../fonts/Sora-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Sora";
+    src: url('../../fonts/Sora-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Sora";
+    src: url('../../fonts/Sora-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+        font-display: swap;
+}
+@font-face {
+    font-family: "Sora";
+    src: url('../../fonts/Sora-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* DM Sans */
+@font-face {
+    font-family: "DM Sans";
+    src: url('../../fonts/dm-sans-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "DM Sans";
+    src: url('../../fonts/dm-sans-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "DM Sans";
+    src: url('../../fonts/dm-sans-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "DM Sans";
+    src: url('../../fonts/dm-sans-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.font-dm {
+    font-family: 'DM Sans', sans-serif;
+}
+.font-sora {
+    font-family: 'Sora', sans-serif;
+}
+
+.display6-size {
+/* 40px at 480px, 78px at 1920px */
+    font-size: clamp(2.5rem, calc(1.375rem + 2.638vw), 4.875rem);
+    line-height: 1.07;
+}
+
+.display5-size {
+    /* 30px at 480px, 43px at 1920px */
+    font-size: clamp(1.875rem, calc(1.25vw + 1.5rem), 2.75rem);
+    // font-size: clamp(1.875rem, calc(1.6041rem + 0.903vw), 3rem);
+    line-height: 1.1;
+}
+
+.display4-size {
+    /* 26px at 480px, 32px at 1920px */
+    font-size: clamp(1.625rem, calc(1.475rem + 0.417vw), 2rem);
+}
+
+.display3-size {
+    /* 22px at 480px, 24px at 1920px */
+    font-size: clamp(1.375rem, calc(1.3375rem + 0.139vw), 1.5rem);
+}
+
+.display2-size {
+    /* 20px at 480px, 22px at 1920px */
+    font-size: clamp(1.25rem, calc(1.2125rem + 0.139vw), 1.375rem);
+}
+
+.display1-size {
+    /* 16px at 480px, 18px at 1920px */
+    font-size: clamp(1rem, calc(0.9625rem + 0.139vw), 1.125rem);
+}
+
+.font-dm {
+    .display6-size {
+        font-size: clamp(2.8rem, calc(2.778vw + 1.667rem), 5rem);
+        line-height: 1.02;
+        letter-spacing: -3px;
+    }
+    .display5-size {
+        font-size: clamp(1.875rem, calc(1.25vw + 1.5rem), 2.9rem);
+        line-height: 1.1;
+        letter-spacing: -2px;
+    } 
+    .display4-size {
+        letter-spacing: -1px;
+    }
+}
+p {
+    font-size: 17px;
+    line-height: 26px;
+    @include media-breakpoint-down(md) {
+        font-size: 16px;
+    }
+}

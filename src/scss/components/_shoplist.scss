@@ -1,0 +1,94 @@
+.shop-wrap {
+    .product-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: $gray-900;
+        line-height: 1;
+    }
+    .product-tag {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 16px;
+        color: $gray-900;
+    }
+    .product-price {
+        font-size: 15px;
+        font-weight: 600;
+        color: $gray-900;
+        .text-decoration-line-through {
+            color: $gray-500;
+            font-size: 13px;
+        }
+    }
+    .shop-image {
+        
+        a {
+            display: block;
+            position: relative;
+            img {
+                width: 90%;
+                object-fit: contain;
+            }
+            .img-one,.img-two {
+                background-image: linear-gradient(to bottom, #f1f1f1, #e2e2e2);
+                border-radius: 6px;
+                width: 100%;
+                height: 360px;
+                overflow: hidden;
+                text-align: center;
+            }
+            .img-two {
+                transition: 0.4s;
+                position: absolute;
+                width: 100%;
+                top:0;
+                left: 0;
+                
+            }
+            .img-one {
+                display: inline-block;
+            }
+            .img-two {
+                opacity:0;
+                visibility: hidden;
+            }
+            &:hover {
+                .img-one {
+                    opacity:0;
+                    visibility: hidden;
+                }
+                .img-two {
+                    opacity:1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+.shop-single {
+    .product-title {
+        // font-size: 24px;
+        font-weight: 600;
+        color: $gray-900;
+    }
+    .review-star {
+        gap: 2px;
+    }
+    .product-price {
+        font-size: 19px;
+        font-weight: 600;
+        color: $gray-900;
+        display: flex;
+        align-items: center;
+        gap:4px;
+        .text-decoration-line-through {
+            color: $gray-500;
+            font-size: 15px;
+        }
+    }
+    .product-des {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+}

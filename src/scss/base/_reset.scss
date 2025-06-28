@@ -1,0 +1,97 @@
+* {
+    outline: none;
+    padding: 0;
+
+    &::after {
+        margin : 0;
+        padding: 0;
+    }
+
+    &::before {
+        margin : 0;
+        padding: 0;
+    }
+}
+
+body {
+    line-height: 1.75;
+    margin:0 auto;
+    font-size: 14px;
+    position: relative;
+    &.loading {
+        overflow: hidden;
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-weight:$headings-font-weight;
+}
+p {
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray-700);
+}
+ul {
+    padding: 0;
+    margin : 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+a {
+    // color       : $td;
+    text-decoration: none;
+    outline        : none;
+
+    &:hover,
+    &:focus,
+    &.active {
+        text-decoration: none;
+        outline        : none;
+        // color          : $gray-700;
+    }
+}
+b,
+strong,
+.strong {
+    font-weight: 700;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+}
+
+body.no-scroll {
+    overflow: hidden; // Disable scrolling when drawer is open
+}
+
+
+
+.bg-overlay-one {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+}
+.bg-overlay-two {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+}
+.bg-overlay-three {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+}
+.table {
+    &.bg-transparent{
+        tr > td {
+            background-color: transparent !important;
+        }
+    }
+}

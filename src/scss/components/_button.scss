@@ -1,0 +1,117 @@
+.btn {
+    font-weight: 500;
+}
+.btn-xs {
+    --bs-btn-padding-y: 6px;
+}
+.btn-warning,
+.btn-success,
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+}
+.btn-outline-warning,
+.btn-outline-success,
+.btn-outline-primary {
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+}
+.btn-outline-light {
+    --bs-btn-color: #080808;
+    --bs-btn-border-color: var(--gray-300);
+}
+.btn-light-danger,
+.btn-light-dark,
+.btn-light-info,
+.btn-light-secondary,
+.btn-light-warning,
+.btn-light-success,
+.btn-light-primary {
+    --bs-btn-hover-color: #fff;
+}
+.btn-blank-danger,
+.btn-blank-dark,
+.btn-blank-info,
+.btn-blank-secondary,
+.btn-blank-warning,
+.btn-blank-success,
+.btn-blank-primary {
+    --bs-btn-hover-color: #fff;
+}
+.btn-light-light {
+    background-color: $gray-200 !important;
+    color:$gray-700;
+}
+
+.btn:disabled {
+    color: #fff;
+}
+.btn.btn-light:disabled {
+    color: $gray-900;
+}
+
+.btn-icon {
+    width: 40.5px;
+    height: 40.5px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    i,.icon {
+        font-size: 18px;
+    }
+    &.btn-xs {
+        width: 25px;
+        height: 25px;
+        i,.icon {
+            font-size: 13px;
+        }
+    }
+    &.btn-sm {
+        width: 31.5px;
+        height: 31.5px;
+        i,.icon {
+            font-size: 14px;
+        }
+    }
+    &.btn-md {
+        width: 36px;
+        height: 36px;
+        i,.icon {
+            font-size: 14px;
+        }
+    }
+    &.btn-lg {
+        width: 50.5px;
+        height: 50.5px;
+        i,.icon {
+            font-size: 22px;
+        }
+    }
+}
+.btn-close {
+    &.btn-close-sm {
+        width: .9rem;
+        height: .9rem;
+        padding: 0;
+    }
+}
+.icon-button {
+    width: 42px;
+    height: 42px;
+    i {
+        font-size: 21px;
+        text-align: center;
+    }
+}
+
+.form-check {
+    font-size: 15px;
+    font-weight: 400;
+    color: $gray-900;
+    .form-check-input {
+        margin-top: .3rem;
+    }
+}

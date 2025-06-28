@@ -1,0 +1,181 @@
+// Mixins
+$fw-100: 100 !default;
+$fw-200: 200 !default;
+$fw-300: 300 !default;
+$fw-400: 400 !default;
+$fw-500: 500 !default;
+$fw-600: 600 !default;
+$fw-700: 700 !default;
+$fw-800: 800 !default;
+$fw-900: 900 !default;
+
+
+$fws: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$fws: map-merge(
+    (
+        "100": $fw-100,
+        "200": $fw-200,
+        "300": $fw-300,
+        "400": $fw-400,
+        "500": $fw-500,
+        "600": $fw-600,
+        "700": $fw-700,
+        "800": $fw-800,
+        "900": $fw-900
+    ),
+    $fws
+);
+
+@each $gray, $value in $grays {
+    .text-gray-#{$gray} {color:#{$value} !important;}
+}
+
+@each $gray, $value in $grays {
+    .bg-gray-#{$gray} {background-color:#{$value} !important;}
+}
+@each $gray, $value in $grays {
+    .border-gray-#{$gray} {border-color:#{$value} !important;}
+}
+
+@each $fw, $value in $fws {
+    .fw-#{$fw} {font-weight:#{$value} !important;}
+}
+
+@each $color, $value in $colors {
+    .bg-#{$color}{
+        background-color: $value !important;
+    }    
+    .text-#{$color}{
+        color: $value !important;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-light-#{$color}{
+        background-color: tint-color($value, 80%) !important;
+        color:$value;
+        &:hover {
+            background-color: tint-color($value, 0%) !important;
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .bg-gradient-light-#{$color}{
+        background: linear-gradient(-135deg, tint-color($value, 97%) 1%, #fff 50% , tint-color($value, 85%) );
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-hover-bg-darken-#{$color} {
+        position: relative;
+        overflow: hidden;
+        span,
+        svg {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        &:hover {   
+            svg {
+                transform: translateX(5px);
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            background: darken($value, 15%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: darken($value, 15%);
+            width: 110%;
+            height: 0;
+            padding-bottom: 110%;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+        }
+
+        &:hover {
+        &:before {
+            transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+            transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+        }
+
+        &:after {
+            opacity: 1;
+            transition-duration: 0.01s;
+            transition-delay: 0.3s;
+        }
+    }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-hover-bg-lighten-#{$color} {
+        position: relative;
+        overflow: hidden;
+        span,
+        svg {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        &:hover {   
+            svg {
+                transform: translateX(5px);
+            }
+        }
+        
+
+        &:after {
+            content: '';
+            position: absolute;
+            background: lighten($value, 10%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: lighten($value, 10%);
+            width: 110%;
+            height: 0;
+            padding-bottom: 110%;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+        }
+       
+        &:hover {
+        &:before {
+            transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+            transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+        }
+
+        &:after {
+            opacity: 1;
+            transition-duration: 0.01s;
+            transition-delay: 0.3s;
+        }
+    }
+    }
+}

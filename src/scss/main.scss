@@ -1,0 +1,14 @@
+// 1. Your variable overrides (before Bootstrap import)
+@import "./base/variables";
+@import "./base/utilities";
+
+// 2. Bootstrap core
+@import "bootstrap/scss/bootstrap.scss";
+
+// 4. Your custom styles (after Bootstrap)
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/mixins";
+@import "./components/button";
+@import "./components/nav";
+@import "./components/footer";
