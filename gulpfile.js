@@ -22,13 +22,19 @@ function scssTask() {
 
 // JS Task
 function jsTask() {
-  return src('src/js/**/*.js')
+  return src([
+      'src/js/vendor/jquery-3.7.1.min.js',
+      'src/js/vendor/bootstrap.bundle.min.js',
+      'src/js/vendor/aos.js',
+      'src/js/vendor/splide.min.js',
+      'src/js/vendor/splide-extension-auto-scroll.min.js',
+      'src/js/main.js'
+    ])
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(dest('dist/js'))
     .pipe(browserSync.stream());
 }
-
 // HTML Task
 function htmlTask() {
   return src('src/*.html')

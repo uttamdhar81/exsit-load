@@ -5,6 +5,10 @@
 // 2. Bootstrap core
 @import "bootstrap/scss/bootstrap.scss";
 
+// 2. Vendor
+@import "vendor/aos";
+@import "vendor/splide";
+
 // 4. Your custom styles (after Bootstrap)
 @import "./base/reset";
 @import "./base/fonts";

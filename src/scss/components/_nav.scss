@@ -196,6 +196,7 @@
         .logo-sub {
             img {
                 height: 2.1rem;
+                width: 100%;
             }
         }
         @include media-breakpoint-down(lg) {
