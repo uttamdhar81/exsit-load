@@ -692,27 +692,8 @@
 
         
     <!-- loader js -->
-    <script src="js/loader.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>
-        $("#contactForm").on("submit", function (e) {
-            e.preventDefault();
-
-            $.ajax({
-            url: "submit-form.php",
-            type: "POST",
-            data: $(this).serialize(),
-            success: function (response) {
-                $("#formResult").html(`<div class="alert alert-success">${response}</div>`);
-                $("#contactForm")[0].reset();
-            },
-            error: function () {
-                $("#formResult").html(`<div class="alert alert-danger">Something went wrong. Please try again later.</div>`);
-            },
-            });
-        });
-    </script>
-
+    <script src="js/main.js"></script>
+    
 
 </body>
 </html>
