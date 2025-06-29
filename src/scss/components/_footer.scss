@@ -84,7 +84,7 @@
         border-color:$gray-800 !important;
         &.border-end {
             @include media-breakpoint-down(lg) {
-                border-color: transparent  !important;
+                border-color: transparent !important;
             }
         }
     }
@@ -94,7 +94,7 @@
         border-color:$gray-200 !important;
         &.border-end {
             @include media-breakpoint-down(lg) {
-                border-color: transparent  !important;
+                border-color: transparent !important;
             }
         }
     }

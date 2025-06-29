@@ -83,14 +83,57 @@
             });
 
             mountSplide('#autoscroll-carousel', {
-                type: 'loop', drag: 'free', focus: 'center', perPage: 6,
+                type: 'loop', drag: 'free', focus: 'center', perPage: 6, pagination: false,
                 breakpoints: { 1024: { perPage: 6 }, 768: { perPage: 4 }, 480: { perPage: 2 } },
                 autoScroll: { speed: 1 }
             }, window.splide.Extensions);
 
-            mountSplide('#counter-carousel', {
-                type: 'loop', perPage: 1, autoplay: true, arrows: true, pagination: false
-            });
+            const connterEl = document.querySelector('#counter-carousel');
+            if (connterEl) {
+                const counterSplide = new Splide(connterEl, {
+                    type: 'loop',
+                    perPage: 1,
+                    autoplay: true,
+                    pauseOnHover: true,
+                    arrows: true,
+                    pagination: false,
+                });
+
+                let counterWrapper = connterEl.querySelector('.counter-carousel-counter');
+                let counterSpan;
+
+                counterSplide.on('mounted', () => {
+                    const totalSlides = counterSplide.length;
+
+                    if (!counterWrapper) {
+                        counterWrapper = document.createElement('div');
+                        counterWrapper.className = 'counter-carousel-counter';
+
+                        counterSpan = document.createElement('span');
+                        counterSpan.className = 'display4-size pe-1';
+                        counterSpan.textContent = '1';
+
+                        counterWrapper.appendChild(counterSpan);
+                        counterWrapper.append(`/${totalSlides}`);
+
+                        connterEl.appendChild(counterWrapper);
+                    } else {
+                        counterSpan = counterWrapper.querySelector('span.display4-size');
+                    }
+
+                    if (counterSpan) {
+                        counterSpan.textContent = counterSplide.index + 1;
+                    }
+                });
+
+                counterSplide.on('move', () => {
+                    if (counterSpan) {
+                        counterSpan.textContent = counterSplide.index + 1;
+                    }
+                });
+
+                counterSplide.mount();
+            }
 
             const vertical = document.querySelector('#vertical-carousel');
             if (vertical) {
