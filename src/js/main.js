@@ -7,12 +7,9 @@
     };
 
     $(function () {
-        $(window).on('load', function () {
-            $('.preloader').fadeOut('slow', function () {
-                $(this).remove(); // Optional: completely remove from DOM
-            });
-        });
-
+        if ($('.preloader').length) {
+        $('.preloader').fadeOut(300);
+        }
         function handleScroll() {
             var $headerWrapper = $(".header-wrapper");
             if ($headerWrapper.length) {
