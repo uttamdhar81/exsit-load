@@ -1,0 +1,40 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999999;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-container {
+    margin: 40px auto;
+    height: 4rem;
+    width: 4rem;
+    position: relative;
+    border-radius: 100%;
+}
+
+.loading {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    border-color: transparent #4e2fda transparent #4e2fda;
+    animation: rotate-loading 1.5s linear infinite;
+    transform-origin: 50% 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -197,6 +197,11 @@
             }
         }
     }
+    &.navbar-light {
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+    }
     .menu-head {
         display: none;
         color: $gray-900;
@@ -263,6 +268,47 @@
             align-items: center;
             color: $gray-900 !important;
             font-weight: 500;
+        }
+    }
+}
+
+.header-wrapper {
+    transition: all 0.4s ease;
+    z-index: 20 !important;
+    .nav-logo-dark {
+        display: none;
+    }
+    .navbar {
+        &.navbar-light {
+            .btn-outline {
+                color: #fff;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &.scroll-header {
+        background-color: white;
+        box-shadow: 0 4px 80px rgba(0, 0, 0, 0.1);
+        position: fixed !important;
+        left:0;
+        top:0;
+        .nav-logo-dark {
+            display: flex;
+        }
+        .nav-logo-light {
+            display: none;
+        }
+        .navbar {
+            &.navbar-light {
+                .navbar-nav .nav-item .nav-link {
+                    color: $gray-900;
+                }
+            }
+            .btn-outline {
+                color: $gray-900;
+            }
         }
     }
 }

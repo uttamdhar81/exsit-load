@@ -7,6 +7,33 @@
     };
 
     $(function () {
+        $(window).on('load', function () {
+            $('.preloader').fadeOut('slow', function () {
+                $(this).remove(); // Optional: completely remove from DOM
+            });
+        });
+
+        function handleScroll() {
+            var $headerWrapper = $(".header-wrapper");
+            if ($headerWrapper.length) {
+                // Check for .upper-header
+                var upperHeaderHeight = $(".upper-header").length ? $(".upper-header").outerHeight() : 0;
+
+                if ($(window).scrollTop() > upperHeaderHeight) {
+                    $headerWrapper.addClass("scroll-header");
+                } else {
+                    $headerWrapper.removeClass("scroll-header");
+                }
+            }
+        }
+
+        // Run on scroll
+        $(window).on("scroll", handleScroll);
+
+        // Run once on page load
+        handleScroll();
+
+
         // Sidebar Toggle
         $(".mobile-menu-trigger").on("click", function (e) {
             e.preventDefault();
