@@ -7,9 +7,14 @@
     };
 
     $(function () {
-        if ($('.preloader').length) {
-        $('.preloader').fadeOut(300);
-        }
+        
+        $(window).on('load', function () {
+            $('.preloader').fadeOut('200', function () {
+                $(this).remove();
+            });
+        });
+
+
         function handleScroll() {
             var $headerWrapper = $(".header-wrapper");
             if ($headerWrapper.length) {
