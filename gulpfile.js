@@ -28,6 +28,7 @@ function jsTask() {
       'src/js/vendor/aos.js',
       'src/js/vendor/splide.min.js',
       'src/js/vendor/splide-extension-auto-scroll.min.js',
+      'src/js/vendor/glightbox.min.js',
       'src/js/main.js'
     ])
     .pipe(concat('main.js'))

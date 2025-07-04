@@ -57,6 +57,21 @@
 .bg-gradient-orange {
     background:linear-gradient(to bottom, #FF9A63, #FF6C1C);
 }
+.bg-gradient-primary {
+    background:linear-gradient(-70deg, tint-color($primary, 30%), tint-color($primary, 0%));
+}
+.bg-gradient-secondary {
+    background:linear-gradient(-70deg, tint-color($secondary, 30%), tint-color($secondary, 0%));
+}
+
+.bg-gradient-blue-light {
+    background: radial-gradient(circle at 70% 30%, rgba(173, 216, 230, 0.8) 0%, rgba(173, 216, 230, 0.4) 30%, transparent 60%),
+              radial-gradient(circle at 30% 70%, rgba(100, 149, 237, 0.4) 0%, transparent 60%),
+              linear-gradient(135deg, #dff1ff 0%, #b0d0ff 50%, #a6cfff 100%);
+    background-blend-mode: screen;
+    backdrop-filter: blur(20px);
+}
+
 .box-shadow-light-cyan {
     box-shadow: 0 5px 18px #12078f0a, 0 1px 2px #0e094814, 0 0 0 1px #0e09480a, inset 0 0 3px #13276c0a, inset 0 -4px 1px #13276d0f;
 }

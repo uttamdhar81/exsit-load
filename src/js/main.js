@@ -243,5 +243,8 @@
         if (typeof AOS !== 'undefined') {
             AOS.init({ duration: 800, once: true });
         }
+        const lightbox = GLightbox({
+            selector: '.glightbox'
+        });
     });
 })(jQuery);
