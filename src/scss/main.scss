@@ -76,7 +76,7 @@
     box-shadow: 0 5px 18px #12078f0a, 0 1px 2px #0e094814, 0 0 0 1px #0e09480a, inset 0 0 3px #13276c0a, inset 0 -4px 1px #13276d0f;
 }
 .mt-n6 {margin-top: -4rem;}
-
+.d-ruby {display: ruby;}
 .shadow-gradient {
     .icon-gradient {
         position: relative;
@@ -555,4 +555,40 @@ blockquote {
 }
 .overflow-y-hidden {
     overflow-y: hidden;
+}
+.hero-icon-1 {
+    position: absolute;
+    left:30%;
+    top:22%;
+    animation: scale-loading 2s linear 1s infinite;
+}
+.hero-icon-2 {
+    position: absolute;
+    left:25%;
+    bottom:22%;
+    animation: scale-loading 2s linear infinite;
+}
+.hero-icon-3 {
+    position: absolute;
+    right:30%;
+    top:17%;
+    animation: scale-loading 2s linear 1s infinite;
+}
+.hero-icon-4 {
+    position: absolute;
+    right:25%;
+    bottom:25%;
+    animation: scale-loading 2s linear infinite;
+}
+.hero-icon-5 {
+    position: absolute;
+    left:12%;
+    top:35%;
+    animation: rotate-loading 2s linear infinite;
+}
+.hero-icon-6 {
+    position: absolute;
+    right:15%;
+    bottom:47%;
+    animation: rotate-loading 2s linear infinite;
 }

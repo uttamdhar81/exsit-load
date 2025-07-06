@@ -45,6 +45,7 @@ $pop: (
     8: 2rem,      // 32px
     9: 2.25rem,   // 36px
     10: 2.5rem,   // 40px
+    16: 4rem,   // 40px
     25: 25%,
     33: 33.3333%,
     50: 50%,
@@ -98,6 +99,12 @@ $utilities: (
     class: end,
     responsive: true,
     values: map-merge($pop, (auto: auto))
+),
+"right-negative": (
+    property: right,
+    class: end-n,
+    responsive: true,
+    values: map-merge($pop-negative, (auto: auto))
 ),
 
 "height": (

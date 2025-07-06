@@ -167,7 +167,7 @@
             const vertical = document.querySelector('#vertical-carousel');
             if (vertical) {
                 const verticalSplide = new Splide(vertical, {
-                    direction: 'ttb', height: '140px', perPage: 3, autoplay: true,
+                    direction: 'ttb', height: '140px', perPage: 3, perMove:1, autoplay: true,
                     interval: 3000, arrows: false, pagination: true, drag: false
                 });
 

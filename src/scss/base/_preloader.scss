@@ -38,3 +38,14 @@
         transform: rotate(360deg);
     }
 }
+@keyframes scale-loading {
+    0% {
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.3);
+    }
+}
