@@ -225,3 +225,23 @@
     }
     
 }
+.carousel-edge-fade {
+    position: relative;
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        top:0;
+        height: 100%;
+        width: 150px;
+        z-index: 1;
+    }
+    &:after {
+        left:0;
+        background: linear-gradient(to right, #fff, transparent);
+    }
+    &:before {
+        right:0;
+        background: linear-gradient(to right, transparent, #fff);
+    }
+}

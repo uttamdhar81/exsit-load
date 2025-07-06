@@ -11,9 +11,15 @@
 
 // 4. Your custom styles (after Bootstrap)
 @import "./base/reset";
+@import "./base/helpers";
+@import "./base/gradient";
+@import "./base/spacing";
 @import "./base/fonts";
 @import "./base/mixins";
 @import "./base/preloader";
+@import "./base/arrowtop";
+
+@import "./components/banner";
 @import "./components/button";
 @import "./components/nav";
 @import "./components/footer";
@@ -21,62 +27,12 @@
 
 
 
-.bg-gradient-black-bottom-g4:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background:linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
-    top:0;
-    left:0;
-}
-.bg-gradient-black-bottom-g5:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background:linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
-    top:0;
-    left:0;
-}
-.bg-gradient-home-banner {
-    background-image: url(../images/svg/dots.svg), linear-gradient(166deg, #fff0 50%, #fff6), linear-gradient(#f3f0ff, #f0f6ff);
-}
-.bg-gradient-light-white {
-    background:linear-gradient(to bottom, #fff, #f5f5f5);
-}
-.bg-gradient-white-light {
-    background:linear-gradient(to bottom, #f8f8f8, #fff);
-}
-.bg-gradient-gray-100-200 {
-    background:linear-gradient(to bottom, $gray-200, $gray-100);
-}
-.bg-gradient-cyan-blue {
-    background:linear-gradient(to bottom, #98FCFF, #D7E0FF);
-}
-.bg-gradient-orange {
-    background:linear-gradient(to bottom, #FF9A63, #FF6C1C);
-}
-.bg-gradient-primary {
-    background:linear-gradient(-70deg, tint-color($primary, 30%), tint-color($primary, 0%));
-}
-.bg-gradient-secondary {
-    background:linear-gradient(-70deg, tint-color($secondary, 30%), tint-color($secondary, 0%));
-}
 
-.bg-gradient-blue-light {
-    background: radial-gradient(circle at 70% 30%, rgba(173, 216, 230, 0.8) 0%, rgba(173, 216, 230, 0.4) 30%, transparent 60%),
-              radial-gradient(circle at 30% 70%, rgba(100, 149, 237, 0.4) 0%, transparent 60%),
-              linear-gradient(135deg, #dff1ff 0%, #b0d0ff 50%, #a6cfff 100%);
-    background-blend-mode: screen;
-    backdrop-filter: blur(20px);
-}
 
 .box-shadow-light-cyan {
     box-shadow: 0 5px 18px #12078f0a, 0 1px 2px #0e094814, 0 0 0 1px #0e09480a, inset 0 0 3px #13276c0a, inset 0 -4px 1px #13276d0f;
 }
-.mt-n6 {margin-top: -4rem;}
-.d-ruby {display: ruby;}
+
 .shadow-gradient {
     .icon-gradient {
         position: relative;
@@ -117,80 +73,7 @@
         transition: transform ease .2s;
     }
 }
-.pt-75 {
-    padding-top: 75px;
-    @include media-breakpoint-down(lg) {
-        padding-top: 50px;
-    }
-    @include media-breakpoint-down(md) {
-        padding-top: 40px;
-    }
-}
-.pb-100 {
-    padding-bottom: 100px;
-    @include media-breakpoint-down(lg) {
-        padding-bottom: 75px;
-    }
-    @include media-breakpoint-down(md) {
-        padding-bottom: 50px;
-    }
-}
-.py-100 {
-    padding-top: 100px;
-    padding-bottom: 110px;
-    @include media-breakpoint-down(lg) {
-        padding-top: 75px;
-        padding-bottom: 75px;
-    }
-    @include media-breakpoint-down(md) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-}
-.pb-100 {
-    padding-bottom: 100px;
-    @include media-breakpoint-down(lg) {
-        padding-bottom: 75px;
-    }
-    @include media-breakpoint-down(md) {
-        padding-bottom: 50px;
-    }
-}
 
-.py-90 {
-    padding-top: 90px;
-    padding-bottom: 100px;
-    @include media-breakpoint-down(lg) {
-        padding-top: 65px;
-        padding-bottom: 65px;
-    }
-    @include media-breakpoint-down(md) {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
-.py-70 {
-    padding-top: 70px;
-    padding-bottom: 100px;
-    @include media-breakpoint-down(lg) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    @include media-breakpoint-down(md) {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-.pb-65 {
-    padding-bottom: 55px;
-    @include media-breakpoint-down(lg) {
-        padding-bottom: 40px;
-    }
-    @include media-breakpoint-down(md) {
-        padding-bottom: 30px;
-    }
-}
 .text-gradient {
     background: linear-gradient(to right, #40DFFF, #2AF294);
     -webkit-background-clip: text;
@@ -199,96 +82,9 @@
 .bg-white-opacity-25 {
     background: rgba(255,255,255,0.25);
 }
-.header-top {
-    padding-top: 90px;
-}
-
-.aspect-box {
-    aspect-ratio: 234 / 307;
-    background-size: cover;
-    width: 100%; /* or fixed width */
-}
 
 
 
-.arrow-round-wrap {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    display: block;
-    border-radius: 50px;
-    box-shadow: $input-box-shadow;
-    z-index: 10000;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(15px);
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-    &.active-arrow {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-    svg path {
-        fill: #fff;
-    }
-    svg.arrow-circle path {
-        stroke-width: 4;
-        box-sizing: border-box;
-        -webkit-transition: all 0.2s linear;
-        transition: all 0.2s linear;
-    }
-    .arrow-svg {
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        line-height: 1px;
-    }
-    &.primary {
-        svg.arrow-circle path {
-            stroke:$primary;
-        }
-        .arrow-svg svg {
-            color:$primary !important;
-        }
-    }
-    &.green {
-        svg.arrow-circle path {
-            stroke:$green;
-        }
-        .arrow-svg svg {
-            color:$green !important;
-        }
-    }
-    &.cyan {
-        svg.arrow-circle path {
-            stroke:$cyan;
-        }
-        .arrow-svg svg {
-            color:$cyan !important;
-        }
-    }
-    &.orange {
-        svg.arrow-circle path {
-            stroke:$orange;
-        }
-        .arrow-svg svg {
-            color:$orange !important;
-        }
-    }
-    &.darkgreen {
-        svg.arrow-circle path {
-            stroke:$darkgreen;
-        }
-        .arrow-svg svg {
-            color:$darkgreen !important;
-        }
-    }
-}
 
 .social-wrap {
     right:-3rem;
@@ -318,54 +114,7 @@
         margin-top: 0;
     }
 }
-.hero-wrapper {
-    height: 900px;
-    @include media-breakpoint-down(xl) {
-        height: 800px;
-    }
-    @include media-breakpoint-down(lg) {
-        height: auto;
-        padding-top: 130px;
-        padding-bottom: 80px;
-    }
-    @include media-breakpoint-down(md) {
-        height: auto;
-        padding-top: 110px;
-        padding-bottom: 60px;
-    }
-}
-.banner-wrapper {
-    height: 870px;
-    padding-top: 90px;
-    @include media-breakpoint-down(xxxl) {
-        height: 770px;
-    }
-    @include media-breakpoint-down(xxl) {
-        height: 690px;
-    }
-    @include media-breakpoint-down(lg) {
-        height: auto;
-        padding-top: 100px;
-        padding-bottom: 50px;
-    }
-}
-.banner-wrapper-image {
-    width: 54%;
-    right:0;
-    @include media-breakpoint-down(xxxl) {
-        width: 60%;
-    }
-    @include media-breakpoint-down(xxl) {
-        width: 60%;
-    }
-    @include media-breakpoint-down(xl) {
-        width: 74%;
-        right:-15%;
-    }
-    @include media-breakpoint-down(lg) {
-        display: none;
-    }
-}
+
 .feature-div-hover {
     transition: all .4s ease;
     border:5px solid transparent;
@@ -441,9 +190,6 @@
         }
     }
 }
-.transition-all {
-    transition: all 0.3s ease;
-}
 .image-zoom-onhover {
     img {transition: all 4s ease-out;}
     &:hover {
@@ -452,26 +198,7 @@
         }
     }
 }
-.brand-carousel {
-    position: relative;
-    &:after,
-    &:before {
-        content: '';
-        position: absolute;
-        top:0;
-        height: 100%;
-        width: 150px;
-        z-index: 1;
-    }
-    &:after {
-        left:0;
-        background: linear-gradient(to right, #fff, transparent);
-    }
-    &:before {
-        right:0;
-        background: linear-gradient(to right, transparent, #fff);
-    }
-}
+
 
 .nav-tabs-outline {
     gap:5px;
@@ -482,41 +209,7 @@
         }
     }
 }
-.startup-banner {
-    background-image: url(../images/banner-bg-8.webp);
-    @include media-breakpoint-down(md) {
-        background: radial-gradient(circle at 20% 20%, rgba(255, 140, 0, 0.2) 0%, transparent 60%),
-            radial-gradient(circle at 80% 10%, rgba(255, 165, 0, 0.25) 0%, transparent 50%),
-            radial-gradient(circle at 0% 100%, rgba(255, 120, 0, 0.2) 0%, transparent 60%),
-            #1a1a1a; 
-    }
-}
-.agency-banner {
-    background-image: url(../images/banner-bg-1.webp);
-    @include media-breakpoint-down(md) {
-        background: radial-gradient(circle at bottom left, rgba(46, 169, 177, 0.4) 0%, rgba(14, 61, 66, 1) 50%, #0e3d42 100%);
-    }
-}
-.tech-banner {
-    background-image: url(../images/banner-bg-2.webp);
-    @include media-breakpoint-down(md) {
-        background: 
-        radial-gradient(circle at bottom left, #064d00 0%, #032c00 40%, transparent 80%),
-        radial-gradient(circle at top right, #011900 0%, #032c00 60%, #010f00 100%);
-        background-color: #032c00;
-    }
-}
-.light-blue-banner {
-    background:
-        radial-gradient(circle farthest-corner at 130% 110%, #ffffff 15%, #ffffff00 37%),
-        linear-gradient(50deg, #ffffff00 70%, #ffffffcc 93%),
-        linear-gradient(100deg, #ffffff 12%, #ffffff00 30%),
-        linear-gradient(0deg, #ffffff, #ffffff00 85%),
-        radial-gradient(circle at -20% -40%, #ffffff00 8%, #add8e066 33%, #ffffff00 68%),
-        repeating-linear-gradient(210deg, #ffffff00, #e6f7ff4d 18%, #ffffff00 50%),
-        repeating-linear-gradient(195deg, #ffffff00 55%, #4da6ff4d 66%, #ffffff00 85%);
 
-}
 .form-check.form-switch .form-check-input {
     width: 2.5em;
     height: 1.5em;
@@ -543,52 +236,5 @@ ul.list-style-disc {
         color: var(--gray-800);
     }
 }
-blockquote {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: .75rem;
-    background-color: var(--gray-800);
-    padding: 2.5rem;
-    font-weight: 500;
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.overflow-y-hidden {
-    overflow-y: hidden;
-}
-.hero-icon-1 {
-    position: absolute;
-    left:30%;
-    top:22%;
-    animation: scale-loading 2s linear 1s infinite;
-}
-.hero-icon-2 {
-    position: absolute;
-    left:25%;
-    bottom:22%;
-    animation: scale-loading 2s linear infinite;
-}
-.hero-icon-3 {
-    position: absolute;
-    right:30%;
-    top:17%;
-    animation: scale-loading 2s linear 1s infinite;
-}
-.hero-icon-4 {
-    position: absolute;
-    right:25%;
-    bottom:25%;
-    animation: scale-loading 2s linear infinite;
-}
-.hero-icon-5 {
-    position: absolute;
-    left:12%;
-    top:35%;
-    animation: rotate-loading 2s linear infinite;
-}
-.hero-icon-6 {
-    position: absolute;
-    right:15%;
-    bottom:47%;
-    animation: rotate-loading 2s linear infinite;
-}
+
+

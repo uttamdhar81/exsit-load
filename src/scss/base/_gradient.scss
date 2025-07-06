@@ -1,0 +1,51 @@
+.bg-gradient-black-bottom-g4::after,
+.bg-gradient-black-bottom-g5::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-gradient-black-bottom-g4::after {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.bg-gradient-black-bottom-g5::after {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+}
+
+.bg-gradient-home-banner {
+    background-image: url(../images/svg/dots.svg), linear-gradient(166deg, #fff0 50%, #fff6), linear-gradient(#f3f0ff, #f0f6ff);
+}
+.bg-gradient-light-white {
+    background:linear-gradient(to bottom, #fff, #f5f5f5);
+}
+.bg-gradient-white-light {
+    background:linear-gradient(to bottom, #f8f8f8, #fff);
+}
+.bg-gradient-gray-100-200 {
+    background:linear-gradient(to bottom, $gray-200, $gray-100);
+}
+.bg-gradient-cyan-blue {
+    background:linear-gradient(to bottom, #98FCFF, #D7E0FF);
+}
+
+.bg-gradient-orange {
+    background:linear-gradient(-70deg, tint-color($warning, 30%), tint-color($warning, 0%));
+}
+.bg-gradient-primary {
+    background:linear-gradient(-70deg, tint-color($primary, 30%), tint-color($primary, 0%));
+}
+.bg-gradient-secondary {
+    background:linear-gradient(-70deg, tint-color($secondary, 30%), tint-color($secondary, 0%));
+}
+
+.bg-gradient-blue-light {
+    background: radial-gradient(circle at 70% 30%, rgba(173, 216, 230, 0.8) 0%, rgba(173, 216, 230, 0.4) 30%, transparent 60%),
+              radial-gradient(circle at 30% 70%, rgba(100, 149, 237, 0.4) 0%, transparent 60%),
+              linear-gradient(135deg, #dff1ff 0%, #b0d0ff 50%, #a6cfff 100%);
+    background-blend-mode: screen;
+    backdrop-filter: blur(20px);
+}

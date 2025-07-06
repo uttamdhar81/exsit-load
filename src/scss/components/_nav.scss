@@ -346,3 +346,10 @@
 .menu-banner-green {
     background:linear-gradient(to bottom, #f1ffed, #faffdf);
 }
+
+.header-top {
+    padding-top: 90px;
+    @include media-breakpoint-down(lg) {
+        padding-top: 60px;
+    }
+}

@@ -1,0 +1,118 @@
+.hero-wrapper {
+    height: 900px;
+    @include media-breakpoint-down(xl) {
+        height: 800px;
+    }
+    @include media-breakpoint-down(lg) {
+        height: auto;
+        padding-top: 130px;
+        padding-bottom: 80px;
+    }
+    @include media-breakpoint-down(md) {
+        height: auto;
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
+}
+.banner-wrapper {
+    height: 870px;
+    padding-top: 90px;
+    @include media-breakpoint-down(xxxl) {
+        height: 770px;
+    }
+    @include media-breakpoint-down(xxl) {
+        height: 690px;
+    }
+    @include media-breakpoint-down(lg) {
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+}
+.banner-wrapper-image {
+    width: 54%;
+    right:0;
+    @include media-breakpoint-down(xxxl) {
+        width: 60%;
+    }
+    @include media-breakpoint-down(xxl) {
+        width: 60%;
+    }
+    @include media-breakpoint-down(xl) {
+        width: 74%;
+        right:-15%;
+    }
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}
+.startup-banner {
+    background-image: url(../images/banner-bg-8.webp);
+    @include media-breakpoint-down(md) {
+        background: radial-gradient(circle at 20% 20%, rgba(255, 140, 0, 0.2) 0%, transparent 60%),
+            radial-gradient(circle at 80% 10%, rgba(255, 165, 0, 0.25) 0%, transparent 50%),
+            radial-gradient(circle at 0% 100%, rgba(255, 120, 0, 0.2) 0%, transparent 60%),
+            #1a1a1a; 
+    }
+}
+.agency-banner {
+    background-image: url(../images/banner-bg-1.webp);
+    @include media-breakpoint-down(md) {
+        background: radial-gradient(circle at bottom left, rgba(46, 169, 177, 0.4) 0%, rgba(14, 61, 66, 1) 50%, #0e3d42 100%);
+    }
+}
+.tech-banner {
+    background-image: url(../images/banner-bg-2.webp);
+    @include media-breakpoint-down(md) {
+        background: 
+        radial-gradient(circle at bottom left, #064d00 0%, #032c00 40%, transparent 80%),
+        radial-gradient(circle at top right, #011900 0%, #032c00 60%, #010f00 100%);
+        background-color: #032c00;
+    }
+}
+.light-blue-banner {
+    background:
+        radial-gradient(circle farthest-corner at 130% 110%, #ffffff 15%, #ffffff00 37%),
+        linear-gradient(50deg, #ffffff00 70%, #ffffffcc 93%),
+        linear-gradient(100deg, #ffffff 12%, #ffffff00 30%),
+        linear-gradient(0deg, #ffffff, #ffffff00 85%),
+        radial-gradient(circle at -20% -40%, #ffffff00 8%, #add8e066 33%, #ffffff00 68%),
+        repeating-linear-gradient(210deg, #ffffff00, #e6f7ff4d 18%, #ffffff00 50%),
+        repeating-linear-gradient(195deg, #ffffff00 55%, #4da6ff4d 66%, #ffffff00 85%);
+}
+.hero-icon-1 {
+    position: absolute;
+    left:30%;
+    top:22%;
+    animation: scale-loading 2s linear 1s infinite;
+}
+.hero-icon-2 {
+    position: absolute;
+    left:25%;
+    bottom:22%;
+    animation: scale-loading 2s linear infinite;
+}
+.hero-icon-3 {
+    position: absolute;
+    right:30%;
+    top:17%;
+    animation: scale-loading 2s linear 1s infinite;
+}
+.hero-icon-4 {
+    position: absolute;
+    right:25%;
+    bottom:25%;
+    animation: scale-loading 2s linear infinite;
+}
+.hero-icon-5 {
+    position: absolute;
+    left:12%;
+    top:35%;
+    animation: rotate-loading 2s linear infinite;
+}
+.hero-icon-6 {
+    position: absolute;
+    right:15%;
+    bottom:47%;
+    animation: rotate-loading 2s linear infinite;
+}

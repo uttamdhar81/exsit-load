@@ -1,0 +1,78 @@
+.arrow-round-wrap {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    box-shadow: $input-box-shadow;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    &.active-arrow {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    svg path {
+        fill: #fff;
+    }
+    svg.arrow-circle path {
+        stroke-width: 4;
+        box-sizing: border-box;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    .arrow-svg {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        line-height: 1px;
+    }
+    &.primary {
+        svg.arrow-circle path {
+            stroke:$primary;
+        }
+        .arrow-svg svg {
+            color:$primary !important;
+        }
+    }
+    &.green {
+        svg.arrow-circle path {
+            stroke:$green;
+        }
+        .arrow-svg svg {
+            color:$green !important;
+        }
+    }
+    &.cyan {
+        svg.arrow-circle path {
+            stroke:$cyan;
+        }
+        .arrow-svg svg {
+            color:$cyan !important;
+        }
+    }
+    &.orange {
+        svg.arrow-circle path {
+            stroke:$orange;
+        }
+        .arrow-svg svg {
+            color:$orange !important;
+        }
+    }
+    &.darkgreen {
+        svg.arrow-circle path {
+            stroke:$darkgreen;
+        }
+        .arrow-svg svg {
+            color:$darkgreen !important;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@mixin responsive-space($property, $default, $lg: null, $md: null) {
+    #{$property}: map-get($space, $default);
+
+    @if $lg != null {
+        @include media-breakpoint-down(lg) {
+        #{$property}: map-get($space, $lg);
+        }
+    }
+
+    @if $md != null {
+        @include media-breakpoint-down(md) {
+        #{$property}: map-get($space, $md);
+        }
+    }
+}
+
+.pt-75 {
+    // 75px = 4.6875rem → Not in your map, fallback to px or closest
+    padding-top: 4.6875rem;
+    @include media-breakpoint-down(lg) {
+        @include responsive-space(padding-top, 17); // 80px
+    }
+    @include media-breakpoint-down(md) {
+        @include responsive-space(padding-top, 10); // 40px
+    }
+}
+
+.pb-100 {
+    padding-bottom: 6.25rem; // 100px manual
+    @include media-breakpoint-down(lg) {
+        @include responsive-space(padding-bottom, 17); // 80px
+    }
+    @include media-breakpoint-down(md) {
+        @include responsive-space(padding-bottom, 10); // 40px
+    }
+}
+
+.py-100 {
+    padding-top: 6.25rem;  // 100px
+    padding-bottom: 6.875rem; // 110px
+    @include media-breakpoint-down(lg) {
+        @include responsive-space(padding-top, 17); // 80px
+        @include responsive-space(padding-bottom, 17); // 80px
+    }
+    @include media-breakpoint-down(md) {
+        @include responsive-space(padding-top, 10); // 40px
+        @include responsive-space(padding-bottom, 10); // 40px
+    }
+}
+
+.py-90 {
+    padding-top: 5.625rem; // 90px
+    padding-bottom: 6.25rem; // 100px
+    @include media-breakpoint-down(lg) {
+        padding-top: 4.0625rem; // 65px
+        padding-bottom: 4.0625rem;
+    }
+    @include media-breakpoint-down(md) {
+        @include responsive-space(padding-top, 10);
+        @include responsive-space(padding-bottom, 10);
+    }
+}
+
+.py-70 {
+    padding-top: 4.375rem; // 70px
+    padding-bottom: 6.25rem; // 100px
+    @include media-breakpoint-down(lg) {
+        @include responsive-space(padding-top, 10);
+        @include responsive-space(padding-bottom, 10);
+    }
+    @include media-breakpoint-down(md) {
+        @include responsive-space(padding-top, 9); // 36px
+        @include responsive-space(padding-bottom, 9);
+    }
+}
+
+.pb-65 {
+    padding-bottom: 3.4375rem; // 55px
+    @include media-breakpoint-down(lg) {
+        @include responsive-space(padding-bottom, 10);
+    }
+    @include media-breakpoint-down(md) {
+        @include responsive-space(padding-bottom, 9); // 36px
+    }
+}
