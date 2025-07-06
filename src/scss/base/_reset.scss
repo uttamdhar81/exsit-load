@@ -76,38 +76,9 @@ select:-webkit-autofill:focus {
 body.no-scroll {
     overflow: hidden; // Disable scrolling when drawer is open
 }
-.aspect-box {
-    aspect-ratio: 234 / 307;
-    background-size: cover;
-    width: 100%; /* or fixed width */
-}
-blockquote {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: .75rem;
-    background-color: var(--gray-800);
-    padding: 2.5rem;
-    font-weight: 500;
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 
 
 
-.bg-overlay-one {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
-}
-.bg-overlay-two {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-}
-.bg-overlay-three {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
-}
-.table {
-    &.bg-transparent{
-        tr > td {
-            background-color: transparent !important;
-        }
-    }
-}
+
+
 

@@ -49,3 +49,17 @@
     background-blend-mode: screen;
     backdrop-filter: blur(20px);
 }
+.bg-overlay-one {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+}
+.bg-overlay-two {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+}
+.bg-overlay-three {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+}
+.text-gradient {
+    background: linear-gradient(to right, #40DFFF, #2AF294);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
