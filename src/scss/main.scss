@@ -18,6 +18,7 @@
 @import "./base/mixins";
 @import "./base/preloader";
 @import "./base/arrowtop";
+@import "./base/shadow";
 
 @import "./components/banner";
 @import "./components/button";
@@ -33,37 +34,7 @@
     box-shadow: 0 5px 18px #12078f0a, 0 1px 2px #0e094814, 0 0 0 1px #0e09480a, inset 0 0 3px #13276c0a, inset 0 -4px 1px #13276d0f;
 }
 
-.shadow-gradient {
-    .icon-gradient {
-        position: relative;
-        z-index: 0;
-        transition: transform 0.3s ease;
-    }
 
-    .icon-gradient::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to bottom right, #FF9A63, #FF6C1C);
-        filter: blur(30px);
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        z-index: -1;
-        pointer-events: none;
-    }
-
-    &:hover .icon-gradient::after {
-        opacity: 0.7;
-    }
-    .btn {
-        svg {
-            transition: all 0.4s ease;
-        }
-    }
-    &:hover {
-        .btn svg {transform: translateX(5px);}   
-    }
-}
 
 
 .avatar-group {
@@ -151,45 +122,8 @@
     &:before {
         left:0;
     }
-    
-}
-.shadow-hover {
-    transition: all 0.3s ease;
-    &:hover {
-        box-shadow: $box-shadow-sm;
-    }
-}
-.shadow-hover-lg {
-    transition: all 0.4s ease;
-    .btn {
-        svg {
-            transition: all 0.4s ease;
-        }
-    }
-    &:hover {
-        box-shadow: 0 6px 25px 4px rgba(10, 22, 94, 0.05);
-        transform: translateY(-2px);
-        .btn {
-            svg {
-                transform: translatex(5px);
-            }
-        }
-    }
 }
 
-.shadow-hover-lg {
-    transition: all 0.4s ease;
-    .scale-img {
-        transition: all 5s ease;
-    }
-    &:hover {
-        box-shadow: 0 10px 30px 4px rgba(10, 22, 94, 0.07);
-        transform: translateY(-2px);
-        .scale-img {
-            transform: scale(1.2);
-        }
-    }
-}
 .image-zoom-onhover {
     img {transition: all 4s ease-out;}
     &:hover {
@@ -223,18 +157,6 @@
     top: 0;
     z-index: 1020; 
 }
-ul.list-style-disc {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    list-style-type: disc;
-    padding-left: 1rem;
-    li {
-        list-style: disc;
-        line-height: 28px;
-        font-size: 16px;
-        font-weight: 500;
-        color: var(--gray-800);
-    }
-}
+
 
 

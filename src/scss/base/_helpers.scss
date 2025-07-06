@@ -1,3 +1,16 @@
 .overflow-y-hidden {overflow-y: hidden;}
 .mt-n6 {margin-top: -4rem;}
 .d-ruby {display: ruby;}
+ul.list-style-disc {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: disc;
+    padding-left: 1rem;
+    li {
+        list-style: disc;
+        line-height: 28px;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--gray-800);
+    }
+}
